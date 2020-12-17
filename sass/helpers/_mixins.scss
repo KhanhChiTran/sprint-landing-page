@@ -1,0 +1,94 @@
+@mixin h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 6.8rem; /* 68px */
+  line-height: 8rem; /* 80px */
+  letter-spacing: 0.2px;
+  color: $primary-text-color;
+}
+
+@mixin h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 4rem; /* 40px */
+  line-height: 5.7rem; /* 57px */
+  letter-spacing: 0.2px;
+  color: $primary-text-color;
+}
+
+@mixin h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem; /* 24px */
+  line-height: 3.2rem; /* 32px */
+  letter-spacing: 0.1px;
+  color: $primary-text-color;
+}
+
+@mixin h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 2rem; /* 20px */
+  line-height: 3rem; /* 30px */
+  letter-spacing: 0.2px;
+  color: $secondary-text-color;
+}
+
+@mixin h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem; /* 16px */
+  line-height: 2.4rem; /* 24px */
+  letter-spacing: 0.1px;
+  color: $primary-text-color;
+}
+
+@mixin h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem; /* 14px */
+  line-height: 2.4rem; /* 24px */
+  letter-spacing: 0.2px;
+  color: $primary-text-color;
+}
+
+@mixin link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem; /* 14px */
+  line-height: 2.4rem; /* 24px */
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: $secondary-text-color;
+  text-decoration: none;
+}
+
+@mixin p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem; /* 14px */
+  line-height: 2rem; /* 20px */
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: $secondary-text-color;
+}
+
+@mixin input-p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem; /* 14px */
+  line-height: 2.8rem; /* 28px */
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: $secondary-text-color;
+}
+
+@mixin btn-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem; /* 14px */
+  line-height: 2.8rem; /* 28px */
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: $highlight-text-color;
+}

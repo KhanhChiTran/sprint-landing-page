@@ -1,0 +1,57 @@
+.container-fluid {
+  width: 100%;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.box-flex {
+  display: flex;
+}
+
+$columns: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+$bp: (
+  "m": 500px,
+  "lg": 800px,
+);
+
+@each $column in $columns {
+  .col-#{$column} {
+    grid-column: span #{$column};
+  }
+}
+
+@mixin respond($point) {
+  @media (min-width: map-get($bp, $point)) {
+    @content;
+  }
+}
+
+@each $column in $columns {
+  .col-m-#{$column} {
+    @include respond("m") {
+      grid-column: span $column;
+    }
+  }
+}
+
+@each $column in $columns {
+  .col-lg-#{$column} {
+    @include respond("lg") {
+      grid-column: span $column;
+    }
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+section {
+  padding-top: 50px;
+}

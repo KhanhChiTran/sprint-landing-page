@@ -1,0 +1,59 @@
+footer {
+  background-color: $dark-background-color;
+  color: $light-text-color;
+  font-size: 1.6rem;
+}
+
+.footer-nav {
+  padding: 4rem 0;
+  border-bottom: 1px solid $light-text-color;
+  h3 {
+    @include h3;
+    color: $light-text-color;
+  }
+}
+
+.info {
+  padding: 6rem 0;
+  h5 {
+    @include h5;
+    margin-bottom: 2rem;
+    color: $light-text-color;
+  }
+  a {
+    @include link;
+    text-align: left;
+    color: $muted-color;
+    display: block;
+  }
+}
+
+.submit-box {
+  position: relative;
+  p {
+    @include p;
+    color: $muted-color;
+    text-align: left;
+  }
+  button {
+    border: none;
+    display: block;
+    top: 44px;
+    right: 0;
+    position: absolute;
+    height: 27.5%;
+    width: 30%;
+    background-color: $primary-color;
+    color: $light-text-color;
+  }
+}
+
+.background-blue {
+  background-color: $highlight-color;
+
+  h6 {
+    @include h6;
+    padding: 2rem 0;
+    color: $light-text-color;
+  }
+}

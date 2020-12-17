@@ -1,0 +1,106 @@
+.why-choose-us {
+  font-size: 1.6rem;
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    &--h3 {
+      @include h2;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .small-text {
+      @include p;
+      width: 50%;
+      margin-bottom: 2rem;
+    }
+  }
+  &__cards {
+    &--webdev,
+    &--nation,
+    &--digital {
+      background-color: $card-background-color;
+    }
+  }
+}
+
+.card-translate {
+  transform: translateY(6rem);
+  margin-top: -4rem;
+}
+
+.card {
+  padding: 0 2rem;
+
+  border-radius: 4px;
+  &-content {
+    padding: 3rem 5rem;
+    background-color: white;
+    border: 1px solid rgba(169, 214, 255, 1);
+    li {
+      @include h6;
+      list-style: circle;
+      margin-bottom: 2rem;
+    }
+    a {
+      @include link;
+      color: $primary-color;
+    }
+  }
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  .symbol-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    height: 7.2rem;
+    width: 7.2rem;
+  }
+
+  h5 {
+    @include h5;
+    padding-left: 1rem;
+  }
+}
+
+// service =======
+
+.service {
+  .why-choose-us__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    &--h3 {
+      @include h2;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .small-text {
+      @include p;
+      width: 50%;
+      margin-bottom: 2rem;
+    }
+  }
+  &__video {
+    img {
+      width: 100%;
+      margin-bottom: 8rem;
+    }
+  }
+
+  .background-blue {
+    background-color: $highlight-color;
+    height: 40rem;
+    position: absolute;
+    transform: translateY(-400px);
+    z-index: -5;
+  }
+}
