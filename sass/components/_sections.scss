@@ -1,25 +1,87 @@
 // Hero section
-@import "../helpers/mixins";
+
+@keyframes herofadeIn {
+  50% {
+    transform: translateY(6%);
+  }
+  75% {
+    transform: translateY(-6%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .hero {
-  background-image: url(../images/bg-1.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
   padding: 50px 0;
-  form h4 {
-    @include h3;
-    margin-bottom: 40px;
+  background-color: #f7f7f7;
+
+  @include respond(m) {
+    text-align: left;
+    background-image: url(../images/bg-1.jpeg);
+  }
+  &-content {
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-image: url(../images/bg-1.jpeg);
+    margin-top: 30px;
+
+    // animation
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: herofadeIn 1s linear forwards;
+    @include respond(m) {
+      background-image: none;
+    }
+  }
+  form {
+    text-align: left;
+    h4 {
+      @include h3;
+      margin-bottom: 40px;
+      text-align: center;
+    }
   }
   .header__logo {
     @include h3;
   }
   color: #252b42;
+  .header__nav-link {
+    display: flex;
+    justify-content: flex-end;
+    .link_item {
+      display: none;
+      @include respond(m) {
+        display: block;
+      }
+    }
+    .burger-menu {
+      a {
+        margin-right: 0;
+      }
+      @include respond(m) {
+        display: none;
+      }
+    }
+  }
   .header__nav ul li a {
     display: block;
     margin-right: 30px;
+    img {
+      width: 16px;
+    }
   }
   .hero__title {
-    @include h1;
     margin-top: 50px;
+    @include h2;
+
+    @include respond(m) {
+      @include h1;
+    }
   }
   .hero__text {
     font-weight: 500;
@@ -30,12 +92,143 @@
     margin: 30px 0;
     display: block;
   }
+  .hero__btn {
+    button {
+      margin: 20px auto;
+      @include respond(m) {
+        margin: 0 10px 0 0;
+      }
+    }
+  }
   .hero_book-app {
     background-color: white;
     padding: 40px;
   }
+  .menu--slide-out {
+    max-height: 0;
+    background-color: #f7f7f7;
+    overflow: hidden;
+    transition: max-height 0.6s ease-in-out;
+
+    @include respond(m) {
+      display: none;
+    }
+    li {
+      a {
+        width: 100%;
+        font-size: 30px;
+        line-height: 45px;
+        justify-content: center;
+        letter-spacing: 0.2px;
+        color: $secondary-text-color;
+        margin-bottom: 30px;
+      }
+      &:nth-child(1) {
+        padding-top: 30px;
+      }
+    }
+  }
+  .hide img {
+    position: absolute;
+    top: 53px;
+    right: 18px;
+    width: 18px;
+    cursor: pointer;
+    @include respond(m) {
+      display: none;
+    }
+  }
+  .hide-checkbox {
+    position: absolute;
+    left: -999px;
+  }
+  #menu:checked ~ .menu--slide-out {
+    max-height: 400px;
+  }
 }
 
+//key frame
+
+@keyframes fadeIn {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    max-height: 400px;
+
+    padding-top: 30px;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    height: fit-content;
+    display: block;
+  }
+  50% {
+    height: 300px;
+    display: block;
+  }
+  100% {
+    opacity: 1;
+    height: 700px;
+    padding: 0;
+    display: block;
+  }
+}
+
+// Our Team section
+.our-team {
+  text-align: center;
+  &__heading {
+    h3 {
+      @include h2;
+    }
+  }
+  &__cards--founder {
+    border: 1px solid #eee;
+    padding-bottom: 30px;
+    .founder-image {
+      height: 32vh;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    h5 {
+      @include h5;
+    }
+    h6 {
+      @include h6;
+    }
+    img {
+      width: 100%;
+    }
+    .social-icon {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 24px;
+        height: 24px;
+        margin: 15px;
+      }
+    }
+  }
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #737373;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+    margin: 0 auto;
+  }
+}
 // Make app section
 
 .make-app {
@@ -61,12 +254,16 @@
       padding: 20px;
     }
     .btn-cta {
-      width: 50%;
-      padding: 15px 40px;
+      @include respond(m) {
+        width: 50%;
+        padding: 15px 40px;
+      }
     }
   }
-  .contact-us {
+  .wrap-contact-us {
     background-color: #fff;
+  }
+  .contact-us {
     padding: 40px;
 
     h3 {
@@ -76,12 +273,15 @@
       @include p;
       text-align: left;
     }
-    .col-6:nth-child(2) {
-      padding: 20px;
-      .btn-cta {
-        display: block;
-        margin-left: auto;
-        width: 35%;
+    .col-md-6:nth-child(2) {
+      @include respond(m) {
+        padding: 20px;
+        .btn-cta {
+          display: block;
+          margin-left: auto;
+          width: 35%;
+          min-width: 130px;
+        }
       }
     }
   }

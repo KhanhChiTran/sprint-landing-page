@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
     <title>Corporate-Page</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -11,19 +10,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <div class="wrapper">
       <section class="container-fluid hero">
         <div class="container row">
-          <div class="header__logo col-6">Sprivaten</div>
-          <div class="header__nav col-6">
+          <div class="header__logo col-6 col-md-6">Sprivaten</div>
+          <div class="header__nav col-6 col-md-6">
             <ul class="header__nav-link box-flex">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Contact</a></li>
+              <li class="link_item"><a href="#">Home</a></li>
+              <li class="link_item"><a href="#">Services</a></li>
+              <li class="link_item"><a href="#">Pricing</a></li>
+              <li class="link_item"><a href="#">Contact</a></li>
               <li>
                 <a href=""
                   ><img src="./icons/icn search .icn-xs.svg" alt=""
@@ -37,28 +35,51 @@
             </ul>
           </div>
         </div>
-        <div class="container row">
-          <div class="col col-8">
+        <div class="hide">
+          <label for="menu"> <img src="./icons/burger-menu.svg" alt="" /></label
+          ><input
+            class="hide-checkbox"
+            type="checkbox"
+            name="burger-menu"
+            id="menu"
+          />
+
+          <div class="menu--slide-out">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="container row hero-content">
+          <div class="col col-12 col-md-8">
             <div class="hero__title">Drive More Customers Through Digital</div>
             <span class="hero__text"
               >We know how large objects will act, but things on a small scale.
             </span>
             <div class="hero__btn box-flex">
               <button class="btn btn-bg">Get Quote Now</button>
-              <button class="btn">Lear More</button>
+              <button class="btn">Learn More</button>
             </div>
           </div>
-          <div class="col col-4">
+          <div class="col col-12 col-md-4">
             <div class="hero_book-app">
               <form action="">
                 <h4>Book Appointment</h4>
-                <label for="name">Name*</label>
-                <input type="text" name="" id="name" placeholder="Full Name" />
-                <label for="email">Email*</label>
+                <label for="name-top">Name*</label>
                 <input
                   type="text"
                   name=""
-                  id="email"
+                  id="name-top"
+                  placeholder="Full Name"
+                />
+                <label for="email-top">Email*</label>
+                <input
+                  type="text"
+                  name=""
+                  id="email-top"
                   placeholder="example@gmail.com"
                 />
                 <label for="department">Department *</label>
@@ -74,7 +95,6 @@
                 <input
                   type="button"
                   name="book"
-                  id=""
                   value="Book Appointment"
                   class="btn btn-cta"
                 />
@@ -94,7 +114,9 @@
           </p>
         </div>
         <div class="why-choose-us__cards row">
-          <div class="why-choose-us__cards--webdev card col-4">
+          <div
+            class="why-choose-us__cards--webdev card col-12 col-md-6 col-lg-4"
+          >
             <div class="card-translate">
               <div class="card-header">
                 <div class="symbol-box">
@@ -114,7 +136,9 @@
               </div>
             </div>
           </div>
-          <div class="why-choose-us__cards--nation card col-4">
+          <div
+            class="why-choose-us__cards--nation card col-12 col-md-6 col-lg-4"
+          >
             <div class="card-translate">
               <div class="card-header">
                 <div class="symbol-box">
@@ -134,7 +158,9 @@
               </div>
             </div>
           </div>
-          <div class="why-choose-us__cards--digital card col-4">
+          <div
+            class="why-choose-us__cards--digital card col-12 col-md-6 col-lg-4"
+          >
             <div class="card-translate">
               <div class="card-header">
                 <div class="symbol-box">
@@ -187,7 +213,7 @@
           </div>
         </div>
         <div class="clients__cards row container">
-          <div class="clients__cards--card col-4">
+          <div class="clients__cards--card col-12 col-md-4">
             <div class="card-inside">
               <div class="star-box">
                 <img src="icons/Vectorrating-stars.svg" alt="" />
@@ -210,7 +236,7 @@
             </div>
           </div>
 
-          <div class="clients__cards--card col-4">
+          <div class="clients__cards--card col-12 col-md-4">
             <div class="card-inside">
               <div class="star-box">
                 <img src="icons/Vectorrating-stars.svg" alt="" />
@@ -233,7 +259,7 @@
             </div>
           </div>
 
-          <div class="clients__cards--card col-4">
+          <div class="clients__cards--card col-12 col-md-4">
             <div class="card-inside">
               <div class="star-box">
                 <img src="icons/Vectorrating-stars.svg" alt="" />
@@ -259,26 +285,59 @@
       </section>
       <!-- SECTION ENDS -->
 
-      <!-- <section class="container-fluid our-team">
-        <div class="container">
-          <div class="our-team__heading heading">
-            <h3>What Clients Say</h3>
-            <p class="small-text">
-              Problems trying to resolve the conflict between the two major
-              realms of Classical physics: Newtonian mechanics
-            </p>
+      <section class="container-fluid our-team">
+        <div class="row container">
+          <div class="our-team__heading col-12">
+            <h3>Meet Our Team</h3>
           </div>
-          <div class="our-team__cards">
-            <div class="our-team__cards--founder col-4"></div>
-            <div class="our-team__cards--founder col-4"></div>
-            <div class="our-team__cards--founder col-4"></div>
+          <p class="col-12">
+            Problems trying to resolve the conflict between the two major realms
+            of Classical physics: Newtonian mechanics
+          </p>
+        </div>
+        <div class="row container our-team__cards">
+          <div class="our-team__cards--founder col-12 col-md-4">
+            <div class="founder-image">
+              <img src="./images/team-1.jpeg" alt="" />
+            </div>
+            <h5>Bennita Johnson</h5>
+            <h6>CFO & Founder</h6>
+            <div class="social-icon">
+              <img src="./icons/Vectorfacebook.svg" alt="" />
+              <img src="./icons/Vectorinstagram.svg" alt="" />
+              <img src="./icons/Vectortwitter.svg" alt="" />
+            </div>
+          </div>
+          <div class="our-team__cards--founder col-12 col-md-4">
+            <div class="founder-image">
+              <img src="./images/team-2.jpeg" alt="" />
+            </div>
+            <h5>Bennita Johnson</h5>
+            <h6>CFO & Founder</h6>
+            <div class="social-icon">
+              <img src="./icons/facebook.svg" alt="" />
+              <img src="./icons/Vectorinstagram.svg" alt="" />
+              <img src="./icons/Vectortwitter.svg" alt="" />
+            </div>
+          </div>
+          <div class="our-team__cards--founder col-12 col-md-4">
+            <div class="founder-image">
+              <img src="./images/team-3.jpeg" alt="" />
+            </div>
+            <h5>Bennita Johnson</h5>
+            <h6>CFO & Founder</h6>
+            <div class="social-icon box-flex">
+              <img src="./icons/Vectorfacebook.svg" alt="" />
+              <img src="./icons/Vectorinstagram.svg" alt="" />
+              <img src="./icons/Vectortwitter.svg" alt="" />
+            </div>
           </div>
         </div>
-      </section> -->
+      </section>
       <section class="container-fluid make-app">
         <div class="container row">
-          <div class="col col-7 make-app__content">
-            <div class="make-app__heading">
+          <div class="col-12 col-md-7 make-app__content">
+            <div class="make-app__heading container">
               <h5>Contact Us</h5>
               <h2>Make an Appointment</h2>
             </div>
@@ -314,7 +373,6 @@
                 <div class="container">
                   <textarea
                     name=""
-                    id=""
                     cols="30"
                     rows="10"
                     placeholder="Message"
@@ -325,7 +383,6 @@
                   <input
                     type="button"
                     name="book"
-                    id=""
                     value="Book Appointment"
                     class="btn btn-cta"
                   />
@@ -333,18 +390,20 @@
               </form>
             </div>
           </div>
-          <div class="col col-5 make-app__img">
+          <div class="col-12 col-md-7 make-app__img">
             <!-- <img src="./images/bg-contact-us.jpeg" alt="" /> -->
           </div>
         </div>
-        <div class="container row contact-us">
-          <div class="col col-6">
-            <h3>Consulting Agency For Your Business</h3>
-            <p class="small-text">the quick fox jumps over the lazy dog</p>
-          </div>
+        <div class="container-fluid wrap-contact-us">
+          <div class="container row contact-us">
+            <div class="container col-12 col-md-6">
+              <h3>Consulting Agency For Your Business</h3>
+              <p class="small-text">the quick fox jumps over the lazy dog</p>
+            </div>
 
-          <div class="col col-6">
-            <input type="button" value="Contact Us" class="btn btn-cta" />
+            <div class="container col-12 col-md-6">
+              <input type="button" value="Contact Us" class="btn btn-cta" />
+            </div>
           </div>
         </div>
       </section>
@@ -353,15 +412,9 @@
       <div class="container">
         <div class="row footer-nav">
           <h3 class="col-6">Sprivaten</h3>
-          <!-- <div class="social-icon col-6">
-            <img src="icons/Vectorfacebook.svg" alt="" />
-            <img src="icons/Vectorinstagram.svg" alt="" />
-            <img src="icons/Vectortwitter.svg" alt="" />
-            <img src="icons/Vectoryoutube.svg" alt="" />
-          </div> -->
         </div>
         <div class="info row">
-          <div class="col-2">
+          <div class="col-12 col-md-2">
             <h5>Company Info</h5>
             <a href="">About Us</a>
             <a href="">Carrier</a>
@@ -369,7 +422,7 @@
             <a href="">Blog</a>
           </div>
 
-          <div class="col-2">
+          <div class="col-12 col-md-2">
             <h5>Legal</h5>
             <a href="">About Us</a>
             <a href="">Carrier</a>
@@ -377,7 +430,7 @@
             <a href="">Blog</a>
           </div>
 
-          <div class="col-2">
+          <div class="col-12 col-md-2">
             <h5>Features</h5>
             <a href="">About Us</a>
             <a href="">Carrier</a>
@@ -385,7 +438,7 @@
             <a href="">Blog</a>
           </div>
 
-          <div class="col-2">
+          <div class="col-12 col-md-2">
             <h5>Resources</h5>
             <a href="">About Us</a>
             <a href="">Carrier</a>
@@ -393,7 +446,7 @@
             <a href="">Blog</a>
           </div>
 
-          <div class="col-4 submit-box">
+          <div class="col-12 col-md-4 submit-box">
             <h5>Get in Touch</h5>
             <input type="text" placeholder="Your E-Mail" />
             <button>Subscribe</button>

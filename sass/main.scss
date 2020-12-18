@@ -1,23 +1,19 @@
-@import "helpers/variables.scss";
+@import "helpers/variables";
 
-@import "./helpers/base";
-
+@import "helpers/mixins";
 @import "helpers/base";
 
 @import "components/input";
-@import "helpers/base.scss";
-@import "helpers/function.scss";
-@import "helpers/mixins.scss";
-@import "helpers/reset.scss";
 
-@import "components/buttons.scss";
-@import "components/cards.scss";
-@import "components/footer.scss";
-@import "components/header.scss";
-@import "components/navigation.scss";
-@import "components/sections.scss";
+@import "helpers/function";
+@import "helpers/reset";
 
-@import "layout/why-chose-us.scss";
-@import "layout/clients.scss";
+@import "components/buttons";
+@import "components/cards";
+@import "components/footer";
+@import "components/header";
+@import "components/navigation";
+@import "components/sections";
 
-@import "components/chichi.scss";
+@import "layout/why-chose-us";
+@import "layout/clients";

@@ -14,3 +14,12 @@ $dark-background-color: rgba(37, 43, 66, 1);
 
 // card background color ============
 $card-background-color: rgba(217, 237, 255, 1);
+
+// layout ============
+
+$columns: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+$bp: (
+  m: 768px,
+  lg: 992px,
+);

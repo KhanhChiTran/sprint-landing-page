@@ -28,8 +28,13 @@
 
       .card-inside {
         padding-top: 2rem;
+        background: #ffffff;
+        // border: 1px solid #dedede;
+
+        // border-radius: 4px;
         .star-box {
           margin-bottom: 2rem;
+          display: flex;
         }
         h6 {
           @include h6;
