@@ -1,5 +1,6 @@
 .why-choose-us {
   font-size: 1.6rem;
+
   &__heading {
     display: flex;
     flex-direction: column;
@@ -17,17 +18,35 @@
     }
   }
   &__cards {
+    background-color: #d9edff;
+    padding: 2rem 0;
+    @include respond(m) {
+      background-color: unset;
+    }
     &--webdev,
     &--nation,
     &--digital {
       background-color: $card-background-color;
+      @include respond(m) {
+        margin-top: 60px;
+      }
+    }
+    &--digital {
+      @include respond(m) {
+        grid-column: 4 / 10;
+      }
+      @include respond(lg) {
+        grid-column: span 4;
+      }
     }
   }
 }
 
 .card-translate {
-  transform: translateY(6rem);
-  margin-top: -4rem;
+  @include respond(m) {
+    transform: translateY(6rem);
+    margin-top: -4rem;
+  }
 }
 
 .card {
@@ -46,6 +65,14 @@
     a {
       @include link;
       color: $primary-color;
+      display: block;
+      text-align: left;
+      transition: transform 0.3s linear;
+    }
+    &:hover a {
+      transform: translateX(50px);
+      color: darken($primary-color, 10%);
+      display: block;
     }
   }
 }
@@ -54,6 +81,8 @@
   display: flex;
   align-items: center;
   padding-bottom: 2rem;
+  width: fit-content;
+  margin: auto;
   .symbol-box {
     display: flex;
     justify-content: center;

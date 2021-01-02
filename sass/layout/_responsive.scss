@@ -1,0 +1,29 @@
+// @for $i from 1 through 12 {
+//   .col-#{$i},
+//   .col-md-#{$i},
+//   .col-lg-#{$i} {
+//     width: 100%;
+//   }
+// }
+// @for $i from 1 through 12 {
+//   .col-#{$i} {
+//     flex: 0 0 percentage(1 / 12) * $i;
+//     max-width: percentage(1 / 12) * $i;
+//   }
+// }
+// @media (min-width: 768px) {
+//   @for $i from 1 through 12 {
+//     .col-md-#{$i} {
+//       flex: 0 0 percentage(1 / 12) * $i;
+//       max-width: percentage(1 / 12) * $i;
+//     }
+//   }
+// }
+// @media (min-width: 992px) {
+//   @for $i from 1 through 12 {
+//     .col-lg-#{$i} {
+//       flex: 0 0 percentage(1 / 12) * $i;
+//       max-width: percentage(1 / 12) * $i;
+//     }
+//   }
+// }
