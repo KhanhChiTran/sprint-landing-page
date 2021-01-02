@@ -190,6 +190,14 @@
   &__cards--founder {
     border: 1px solid #eee;
     padding-bottom: 30px;
+
+    &:hover {
+      .founder-image img {
+        filter: grayscale(0);
+        transform: scale(1.04);
+      }
+    }
+
     .founder-image {
       height: 32vh;
       overflow: hidden;
@@ -203,6 +211,9 @@
     }
     img {
       width: 100%;
+      filter: grayscale(1);
+      transform: scale(1);
+      transition: all 0.3s;
     }
     .social-icon {
       display: flex;
